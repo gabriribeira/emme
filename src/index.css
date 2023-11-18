@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fade-in-custom {
+    opacity: 0.3;
+    transform: translateY(10px);
+    transition: opacity 1000ms ease-out, transform 600ms ease-out;
+    will-change: opacity, transform;
+  }
+
+  .fade-in-custom:hover {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 600ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+@font-face {
+  font-family: 'silka_monoregular';
+  src: url('../src/components/Fonts/silka/silkamono-regular-webfont.eot');
+  src: url('../src/components/Fonts/silka/silkamono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../src/components/Fonts/silka/silkamono-regular-webfont.woff2') format('woff2'),
+       url('../src/components/Fonts/silka/silkamono-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'silka_monolight';
+  src: url('../src/components/Fonts/silka/silkamono-light-webfont.eot');
+  src: url('../src/components/Fonts/silka/silkamono-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../src/components/Fonts/silka/silkamono-light-webfont.woff2') format('woff2'),
+       url('../src/components/Fonts/silka/silkamono-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: "n27Font";
+  src: url("../src/components/Fonts/n27/n27-regular-webfont.eot");
+  src: url("../src/components/Fonts/n27/n27-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../src/components/Fonts/n27/n27-regular-webfont.woff") format("woff"),
+    url("../src/components/Fonts/n27/n27-regular-webfont.ttf")
+      format("truetype");
+}
+
+li {
+  font-family: "n27Font", sans-serif;
+}
+
+.bac{
+  font-family: "n27Font", sans-serif;
+}
+
+body {
+  font-family: "silka_monoregular", sans-serif;
+}
+
+
